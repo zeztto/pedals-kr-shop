@@ -7,7 +7,7 @@ import { getReviews } from '@/lib/review-service';
 
 export default function ArtistReviews() {
   const t = useTranslations('reviews');
-  const locale = useLocale();
+  const locale = useLocale() as 'ko' | 'en';
   const reviews = getReviews();
 
   return (
@@ -22,52 +22,49 @@ export default function ArtistReviews() {
         {t('title')}
       </motion.h2>
 
-      <motion.div
-        className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 max-w-6xl mx-auto"
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        {reviews.map((review) => (
-          <div
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        {reviews.map((review, index) => (
+          <motion.div
             key={review.id}
-            className="min-w-[300px] md:min-w-[350px] snap-center flex-shrink-0 bg-bg-primary border border-amber/20 rounded-lg p-6"
+            className="bg-bg-primary border border-amber/20 rounded-lg p-8 flex flex-col"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
+            {/* Quote */}
+            <div className="relative flex-1 mb-6">
+              <span className="absolute -top-1 -left-2 text-amber/20 text-6xl font-heading leading-none select-none">
+                &ldquo;
+              </span>
+              <p className="text-cream/80 italic leading-relaxed pl-6 pt-3 text-[15px]">
+                {review.comment[locale]}
+              </p>
+            </div>
+
             {/* Avatar + name + role */}
-            <div className="flex items-center gap-4 mb-4">
-              <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border border-amber/20">
+            <div className="flex items-center gap-4 pt-4 border-t border-amber/10">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border border-amber/30">
                 <Image
                   src={review.avatar}
-                  alt={review.name[locale as 'ko' | 'en']}
+                  alt={review.name[locale]}
                   fill
                   className="object-cover"
-                  sizes="64px"
+                  sizes="48px"
                 />
               </div>
               <div>
-                <p className="text-cream font-semibold text-base">
-                  {review.name[locale as 'ko' | 'en']}
+                <p className="text-cream font-semibold text-sm">
+                  {review.name[locale]}
                 </p>
-                <p className="text-cream/50 text-sm">
-                  {review.role[locale as 'ko' | 'en']}
+                <p className="text-amber/60 text-xs">
+                  {review.role[locale]}
                 </p>
               </div>
             </div>
-
-            {/* Comment */}
-            <div className="relative">
-              <span className="absolute -top-2 -left-1 text-amber/30 text-4xl font-heading leading-none select-none">
-                &ldquo;
-              </span>
-              <p className="text-cream/80 italic text-sm leading-relaxed pl-5 pt-1">
-                {review.comment[locale as 'ko' | 'en']}
-              </p>
-            </div>
-          </div>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }
