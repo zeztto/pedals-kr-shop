@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "cart": "Cart"
+  },
+  "hero": {
+    "title": "PEDALS",
+    "tagline": "Handcrafted in Korea. Rooted in American & British Sound.",
+    "cta": "Shop Now"
+  },
+  "brandStory": {
+    "title": "Our Story",
+    "paragraph1": "We hold deep reverence for the classic American and British sounds of the 70s and 80s. The warm, rich tones produced by tube amps, vintage fuzz, and overdrive pedals of that era still resonate in our ears today.",
+    "paragraph2": "Through Korean craftsmanship and careful attention to detail, we recreate those sounds for the modern age. Each pedal is not merely an effects unit, but a tool for delivering musical emotion.",
+    "paragraph3": "Through strict component selection standards, we use only the highest quality parts. We prioritize sound over cost."
+  },
+  "craftsmanship": {
+    "title": "Craftsmanship",
+    "steps": [
+      {
+        "title": "Component Selection",
+        "description": "Only the finest components from domestic and international sources are hand-selected. Each resistor, capacitor, and transistor is individually tested and chosen based on tonal characteristics."
+      },
+      {
+        "title": "Hand Wiring",
+        "description": "Every pedal is wired entirely by hand. Born from the skilled hands of our technicians, not assembled by machines — a labor of dedication and care."
+      },
+      {
+        "title": "Testing",
+        "description": "Before completion, every pedal is thoroughly tested through real amplifiers and guitars. Sound quality, noise levels, and durability are all verified."
+      },
+      {
+        "title": "Completion",
+        "description": "Only pedals that pass every verification are released bearing the pedals.kr name. Each pedal is assigned a unique serial number."
+      }
+    ]
+  },
+  "shop": {
+    "title": "Shop",
+    "filterAll": "All",
+    "viewAll": "View All",
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "featured": "Featured Pedals",
+    "relatedProducts": "Related Products"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty",
+    "checkout": "Checkout",
+    "total": "Total",
+    "continueShopping": "Continue Shopping",
+    "added": "Added!"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "placeOrder": "Place Order",
+    "thankYou": "Thank you! Payment integration coming soon. We'll contact you via email."
+  },
+  "footer": {
+    "tagline": "Made with passion in Korea",
+    "contact": "Contact",
+    "copyright": "© 2024 pedals.kr. All rights reserved."
+  },
+  "common": {
+    "currency": "₩",
+    "loading": "Loading..."
+  }
+}
