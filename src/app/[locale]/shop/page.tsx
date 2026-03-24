@@ -6,12 +6,18 @@ import CategoryFilter from '@/components/shop/CategoryFilter';
 import ProductGrid from '@/components/shop/ProductGrid';
 import type { Metadata } from 'next';
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Shop | PEDALS',
-    description:
-      'Browse our collection of handcrafted guitar pedals. Distortion, fuzz, chorus, reverb, delay, and overdrive — each built with care in Korea.',
-  };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const title = locale === 'ko' ? '제품' : 'Shop';
+  const description =
+    locale === 'ko'
+      ? '핸드메이드 기타 이펙터 페달 컬렉션. 디스토션, 퍼즈, 코러스, 리버브, 딜레이, 오버드라이브.'
+      : 'Browse our collection of handcrafted guitar pedals. Distortion, fuzz, chorus, reverb, delay, and overdrive.';
+  return { title, description };
 }
 
 export default async function ShopPage({
@@ -41,7 +47,7 @@ export default async function ShopPage({
       <Suspense fallback={null}>
         <CategoryFilter />
       </Suspense>
-      <ProductGrid products={products} locale={locale} />
+      <ProductGrid products={products} locale={locale} emptyMessage={t('noProducts')} />
     </div>
   );
 }

@@ -11,6 +11,7 @@ interface Props {
 
 export default function OrderSummary({ items, locale }: Props) {
   const t = useTranslations('cart');
+  const tCheckout = useTranslations('checkout');
 
   const resolvedItems = items
     .map((item) => {
@@ -24,7 +25,7 @@ export default function OrderSummary({ items, locale }: Props) {
     0
   );
 
-  const title = locale === 'ko' ? '주문 요약' : 'Order Summary';
+  const title = tCheckout('orderSummary');
 
   return (
     <div className="bg-bg-dark rounded-lg p-6 border border-brown/30">

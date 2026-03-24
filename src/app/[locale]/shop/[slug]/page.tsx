@@ -88,7 +88,7 @@ export default async function ProductPage({
 
           {/* Right column: info */}
           <div>
-            <Badge label={product.category} variant="category" />
+            <Badge label={t(`categories.${product.category}`)} variant="category" />
 
             <h1 className="text-3xl md:text-4xl font-heading font-bold text-cream mt-2">
               {product.name[locale as 'ko' | 'en']}
@@ -104,10 +104,10 @@ export default async function ProductPage({
 
             {/* Specs table */}
             <dl className="mt-8">
-              {Object.entries(product.specs).map(([key, spec]) => (
-                <div key={key} className="border-b border-brown/20 py-3 flex gap-4">
-                  <dt className="text-cream/50 w-32 shrink-0">{key}</dt>
-                  <dd className="text-cream">{spec[locale as 'ko' | 'en']}</dd>
+              {product.specs.map((spec, i) => (
+                <div key={i} className="border-b border-brown/20 py-3 flex gap-4">
+                  <dt className="text-cream/50 w-32 shrink-0">{spec.label[locale as 'ko' | 'en']}</dt>
+                  <dd className="text-cream">{spec.value[locale as 'ko' | 'en']}</dd>
                 </div>
               ))}
             </dl>

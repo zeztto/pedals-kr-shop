@@ -39,7 +39,7 @@ export default function ProductCard({ product, locale }: ProductCardProps) {
             {formatPrice(product.price, locale)}
           </p>
           <div className="mt-2">
-            <Badge label={product.category} variant="category" />
+            <Badge label={t(`categories.${product.category}`)} variant="category" />
           </div>
         </div>
       </div>

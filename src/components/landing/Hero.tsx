@@ -30,7 +30,12 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.25 }}
       >
-        {t('tagline')}
+        {t('tagline').split('\n').map((line, i) => (
+          <span key={i}>
+            {i > 0 && <br />}
+            {line}
+          </span>
+        ))}
       </motion.p>
 
       <motion.div

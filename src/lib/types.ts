@@ -13,7 +13,7 @@ export interface Product {
   price: number; // KRW
   category: Category;
   images: string[];
-  specs: Record<string, LocalizedString>;
+  specs: { label: LocalizedString; value: LocalizedString }[];
   inStock: boolean;
   featured: boolean;
 }

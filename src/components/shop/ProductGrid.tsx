@@ -4,13 +4,14 @@ import type { Product } from '@/lib/types';
 interface ProductGridProps {
   products: Product[];
   locale: string;
+  emptyMessage?: string;
 }
 
-export default function ProductGrid({ products, locale }: ProductGridProps) {
+export default function ProductGrid({ products, locale, emptyMessage }: ProductGridProps) {
   if (products.length === 0) {
     return (
       <div className="text-center py-16">
-        <p className="text-cream text-lg">No products found.</p>
+        <p className="text-cream text-lg">{emptyMessage || 'No products found.'}</p>
       </div>
     );
   }

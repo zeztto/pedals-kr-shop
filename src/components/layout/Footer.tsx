@@ -24,7 +24,7 @@ export default function Footer() {
           {/* Column 2: Links */}
           <div className="flex flex-col gap-3">
             <h3 className="text-cream text-xs uppercase tracking-widest font-semibold opacity-50 mb-1">
-              Links
+              {tFooter('links')}
             </h3>
             <Link
               href="/shop"
@@ -51,12 +51,10 @@ export default function Footer() {
           {/* Column 3: About */}
           <div className="flex flex-col gap-3">
             <p className="text-cream/60 text-sm leading-relaxed">
-              Made with passion in Korea
-              <br />
-              <span className="text-cream/40 text-xs">한국에서 열정으로 제작</span>
+              {tFooter('madeIn')}
             </p>
             <p className="text-cream/30 text-xs mt-auto">
-              © 2026 PEDALS. All rights reserved.
+              © {new Date().getFullYear()} PEDALS. All rights reserved.
             </p>
           </div>
         </div>

@@ -6,33 +6,33 @@
   },
   "hero": {
     "title": "PEDALS",
-    "tagline": "Handcrafted in Korea. Rooted in American & British Sound.",
+    "tagline": "Handcrafted in Korea.\nRooted in American & British Sound.",
     "cta": "Shop Now"
   },
   "brandStory": {
-    "title": "Our Story",
-    "paragraph1": "We hold deep reverence for the classic American and British sounds of the 70s and 80s. The warm, rich tones produced by tube amps, vintage fuzz, and overdrive pedals of that era still resonate in our ears today.",
-    "paragraph2": "Through Korean craftsmanship and careful attention to detail, we recreate those sounds for the modern age. Each pedal is not merely an effects unit, but a tool for delivering musical emotion.",
-    "paragraph3": "Through strict component selection standards, we use only the highest quality parts. We prioritize sound over cost."
+    "title": "Why We Build Pedals",
+    "paragraph1": "The sound that echoed through American and British studios in the 70s and 80s — the distortion of tube amps pushed to their limits, the thick, raw walls of sound from vintage fuzz pedals. Those tones still captivate guitarists decades later.",
+    "paragraph2": "PEDALS recreates that sound, one pedal at a time, from our workshop in Korea. Each pedal is not just an effects unit — it's an instrument that responds to the player's emotion. Point-to-point hand wiring creates signal paths with a depth that machine assembly simply cannot achieve.",
+    "paragraph3": "We judge every component by its sound. We prioritize real tone over spec sheet numbers, and quality over cost. This is how PEDALS builds pedals."
   },
   "craftsmanship": {
     "title": "Craftsmanship",
     "steps": [
       {
         "title": "Component Selection",
-        "description": "Only the finest components from domestic and international sources are hand-selected. Each resistor, capacitor, and transistor is individually tested and chosen based on tonal characteristics."
+        "description": "Only the finest components sourced globally. Each resistor, capacitor, and transistor is personally listened to and hand-selected."
       },
       {
         "title": "Hand Wiring",
-        "description": "Every pedal is wired entirely by hand. Born from the skilled hands of our technicians, not assembled by machines — a labor of dedication and care."
+        "description": "Every pedal is point-to-point wired by hand. Precise signal paths crafted by human hands, not machines."
       },
       {
-        "title": "Testing",
-        "description": "Before completion, every pedal is thoroughly tested through real amplifiers and guitars. Sound quality, noise levels, and durability are all verified."
+        "title": "Sound Testing",
+        "description": "Thoroughly tested through real amps and guitars. Tone, noise, dynamic range — if it doesn't pass by ear, it doesn't ship."
       },
       {
-        "title": "Completion",
-        "description": "Only pedals that pass every verification are released bearing the pedals.kr name. Each pedal is assigned a unique serial number."
+        "title": "Shipping",
+        "description": "Only pedals that pass every inspection receive a serial number and ship under the PEDALS name."
       }
     ]
   },
@@ -44,7 +44,8 @@
     "added": "Added!",
     "outOfStock": "Out of Stock",
     "featured": "Featured Pedals",
-    "relatedProducts": "Related Products",
+    "relatedProducts": "You Might Also Like",
+    "noProducts": "No products found.",
     "categories": {
       "all": "All",
       "distortion": "Distortion",
@@ -68,20 +69,25 @@
     "name": "Name",
     "email": "Email",
     "phone": "Phone",
-    "address": "Address",
+    "address": "Shipping Address",
     "placeOrder": "Place Order",
-    "thankYou": "Thank you! Payment integration coming soon. We'll contact you via email."
+    "thankYou": "Your order has been received. Payment integration is being prepared — we'll reach out via email. Thank you.",
+    "orderSummary": "Order Summary"
   },
   "footer": {
-    "tagline": "Made with passion in Korea",
+    "tagline": "Handcrafted with passion in Korea.",
     "contact": "Contact",
-    "copyright": "© 2024 pedals.kr. All rights reserved."
+    "links": "Links",
+    "madeIn": "Designed and built in Seoul.",
+    "copyright": "© 2026 PEDALS. All rights reserved."
   },
   "reviews": {
     "title": "What Artists Say"
   },
   "common": {
     "currency": "₩",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "notFound": "Page not found",
+    "goHome": "Go Home"
   }
 }

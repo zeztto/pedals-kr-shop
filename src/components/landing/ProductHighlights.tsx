@@ -58,7 +58,7 @@ export default function ProductHighlights() {
                     {formatPrice(product.price, locale)}
                   </p>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <Badge label={product.category} variant="category" />
+                    <Badge label={t(`categories.${product.category}`)} variant="category" />
                     {!product.inStock && (
                       <Badge label={t('outOfStock')} variant="outOfStock" />
                     )}
