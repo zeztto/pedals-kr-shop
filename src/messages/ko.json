@@ -67,6 +67,9 @@
     "contact": "문의",
     "copyright": "© 2024 pedals.kr. All rights reserved."
   },
+  "reviews": {
+    "title": "아티스트 리뷰"
+  },
   "common": {
     "currency": "₩",
     "loading": "로딩 중..."

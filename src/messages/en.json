@@ -67,6 +67,9 @@
     "contact": "Contact",
     "copyright": "© 2024 pedals.kr. All rights reserved."
   },
+  "reviews": {
+    "title": "What Artists Say"
+  },
   "common": {
     "currency": "₩",
     "loading": "Loading..."
