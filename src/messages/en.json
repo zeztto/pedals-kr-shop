@@ -43,7 +43,16 @@
     "addToCart": "Add to Cart",
     "outOfStock": "Out of Stock",
     "featured": "Featured Pedals",
-    "relatedProducts": "Related Products"
+    "relatedProducts": "Related Products",
+    "categories": {
+      "all": "All",
+      "distortion": "Distortion",
+      "fuzz": "Fuzz",
+      "chorus": "Chorus",
+      "reverb": "Reverb",
+      "delay": "Delay",
+      "overdrive": "Overdrive"
+    }
   },
   "cart": {
     "title": "Cart",

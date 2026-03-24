@@ -43,7 +43,16 @@
     "addToCart": "장바구니에 추가",
     "outOfStock": "품절",
     "featured": "추천 페달",
-    "relatedProducts": "관련 제품"
+    "relatedProducts": "관련 제품",
+    "categories": {
+      "all": "전체",
+      "distortion": "디스토션",
+      "fuzz": "퍼즈",
+      "chorus": "코러스",
+      "reverb": "리버브",
+      "delay": "딜레이",
+      "overdrive": "오버드라이브"
+    }
   },
   "cart": {
     "title": "장바구니",
