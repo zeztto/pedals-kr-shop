@@ -1,21 +1,20 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useCartStore } from '@/lib/cart-store';
+import { Link } from '@/i18n/navigation';
 
 export default function CartIcon() {
-  const [count, setCount] = useState(0);
   const [mounted, setMounted] = useState(false);
+  const totalItems = useCartStore((s) => s.getTotalItems());
 
-  useEffect(() => {
-    setMounted(true);
-    // Cart store will be wired in Task 9; for now static 0
-    setCount(0);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
-  const displayCount = mounted ? count : 0;
+  const count = mounted ? totalItems : 0;
 
   return (
-    <button
+    <Link
+      href="/cart"
       aria-label="Cart"
       className="relative flex items-center justify-center p-2 text-cream hover:text-amber transition-colors"
     >
@@ -35,11 +34,11 @@ export default function CartIcon() {
         <line x1="3" y1="6" x2="21" y2="6" />
         <path d="M16 10a4 4 0 0 1-8 0" />
       </svg>
-      {displayCount > 0 && (
+      {count > 0 && (
         <span className="absolute -top-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-amber text-[10px] font-bold text-white leading-none">
-          {displayCount}
+          {count}
         </span>
       )}
-    </button>
+    </Link>
   );
 }

@@ -1,28 +1,41 @@
 'use client';
 
+import { useState } from 'react';
+import { useCartStore } from '@/lib/cart-store';
 import Button from '@/components/ui/Button';
 
 interface AddToCartButtonProps {
   productId: string;
-  inStock: boolean;
-  addToCartText: string;
+  disabled: boolean;
+  addText: string;
+  addedText: string;
   outOfStockText: string;
 }
 
 export default function AddToCartButton({
-  inStock,
-  addToCartText,
+  productId,
+  disabled,
+  addText,
+  addedText,
   outOfStockText,
 }: AddToCartButtonProps) {
+  const [added, setAdded] = useState(false);
+  const addItem = useCartStore((s) => s.addItem);
+
+  const handleClick = () => {
+    addItem(productId);
+    setAdded(true);
+    setTimeout(() => setAdded(false), 1500);
+  };
+
   return (
     <Button
       variant="primary"
-      disabled={!inStock}
-      onClick={() => {
-        // Will be wired to cart store in Task 9
-      }}
+      onClick={handleClick}
+      disabled={disabled}
+      className="w-full mt-6"
     >
-      {inStock ? addToCartText : outOfStockText}
+      {disabled ? outOfStockText : added ? addedText : addText}
     </Button>
   );
 }

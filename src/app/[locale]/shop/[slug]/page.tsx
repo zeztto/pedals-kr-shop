@@ -116,8 +116,9 @@ export default async function ProductPage({
             <div className="mt-8">
               <AddToCartButton
                 productId={product.id}
-                inStock={product.inStock}
-                addToCartText={t('addToCart')}
+                disabled={!product.inStock}
+                addText={t('addToCart')}
+                addedText={t('added')}
                 outOfStockText={t('outOfStock')}
               />
             </div>
