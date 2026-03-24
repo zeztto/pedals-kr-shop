@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#1a1a1a"/>
+  <!-- Pedal body -->
+  <rect x="155" y="115" width="290" height="370" rx="16" ry="16" fill="#202020" stroke="#d4a017" stroke-width="3"/>
+  <!-- Corner screws -->
+  <circle cx="182" cy="142" r="8" fill="#2c2c2c" stroke="#d4a017" stroke-width="1.5"/>
+  <circle cx="418" cy="142" r="8" fill="#2c2c2c" stroke="#d4a017" stroke-width="1.5"/>
+  <circle cx="182" cy="454" r="8" fill="#2c2c2c" stroke="#d4a017" stroke-width="1.5"/>
+  <circle cx="418" cy="454" r="8" fill="#2c2c2c" stroke="#d4a017" stroke-width="1.5"/>
+  <!-- Wave / chorus accent -->
+  <path d="M200 195 Q230 165 260 195 Q290 225 320 195 Q350 165 380 195" fill="none" stroke="#d4a017" stroke-width="3" stroke-linecap="round"/>
+  <path d="M200 215 Q230 185 260 215 Q290 245 320 215 Q350 185 380 215" fill="none" stroke="#d4a017" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+  <!-- 3 knobs -->
+  <circle cx="220" cy="305" r="28" fill="#282828" stroke="#d4a017" stroke-width="2"/>
+  <circle cx="300" cy="305" r="28" fill="#282828" stroke="#d4a017" stroke-width="2"/>
+  <circle cx="380" cy="305" r="28" fill="#282828" stroke="#d4a017" stroke-width="2"/>
+  <!-- Knob indicators -->
+  <line x1="220" y1="280" x2="220" y2="292" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="300" y1="280" x2="300" y2="292" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="380" y1="280" x2="380" y2="292" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Footswitch -->
+  <circle cx="300" cy="405" r="36" fill="#111" stroke="#d4a017" stroke-width="2.5"/>
+  <circle cx="300" cy="405" r="23" fill="#1c1c1c" stroke="#555" stroke-width="1"/>
+  <!-- LED -->
+  <circle cx="300" cy="248" r="6" fill="#d4a017" opacity="0.9"/>
+  <!-- Label -->
+  <text x="300" y="468" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#f5f0e8" text-anchor="middle" letter-spacing="2">ANALOG CHORUS</text>
+  <!-- Side jacks -->
+  <rect x="155" y="275" width="13" height="26" rx="4" fill="#2a2a2a" stroke="#d4a017" stroke-width="1"/>
+  <rect x="432" y="275" width="13" height="26" rx="4" fill="#2a2a2a" stroke="#d4a017" stroke-width="1"/>
+</svg>

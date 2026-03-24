@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#1a1a1a"/>
+  <!-- Head - slightly different proportions -->
+  <circle cx="100" cy="74" r="28" fill="#d4a017" opacity="0.85"/>
+  <!-- Spiky hair -->
+  <path d="M76 60 L82 40 L90 58 L100 36 L110 58 L118 40 L124 60 Q100 48 76 60Z" fill="#d4a017" opacity="0.7"/>
+  <!-- Body/shoulders - broader -->
+  <ellipse cx="100" cy="158" rx="54" ry="36" fill="#d4a017" opacity="0.85"/>
+  <!-- Neck gap -->
+  <rect x="88" y="100" width="24" height="20" fill="#1a1a1a"/>
+</svg>

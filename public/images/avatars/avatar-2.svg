@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#222"/>
+  <!-- Head -->
+  <circle cx="100" cy="70" r="30" fill="#d4a017" opacity="0.85"/>
+  <!-- Hair suggestion -->
+  <path d="M70 60 Q100 38 130 60 L130 70 Q100 50 70 70Z" fill="#d4a017" opacity="0.6"/>
+  <!-- Body/shoulders -->
+  <ellipse cx="100" cy="156" rx="46" ry="34" fill="#d4a017" opacity="0.85"/>
+  <!-- Neck gap -->
+  <rect x="87" y="98" width="26" height="20" fill="#222"/>
+</svg>

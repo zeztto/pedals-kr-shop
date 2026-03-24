@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#1a1a1a"/>
+  <!-- Pedal body - compact variant -->
+  <rect x="165" y="125" width="270" height="350" rx="14" ry="14" fill="#1d1d1d" stroke="#d4a017" stroke-width="3"/>
+  <!-- Corner screws -->
+  <circle cx="190" cy="150" r="7" fill="#2a2a2a" stroke="#d4a017" stroke-width="1.5"/>
+  <circle cx="410" cy="150" r="7" fill="#2a2a2a" stroke="#d4a017" stroke-width="1.5"/>
+  <circle cx="190" cy="448" r="7" fill="#2a2a2a" stroke="#d4a017" stroke-width="1.5"/>
+  <circle cx="410" cy="448" r="7" fill="#2a2a2a" stroke="#d4a017" stroke-width="1.5"/>
+  <!-- Skull/doom accent -->
+  <ellipse cx="300" cy="195" rx="36" ry="32" fill="#d4a017" opacity="0.85"/>
+  <ellipse cx="300" cy="210" rx="28" ry="18" fill="#1d1d1d"/>
+  <!-- eye holes -->
+  <ellipse cx="287" cy="190" rx="7" ry="8" fill="#1d1d1d"/>
+  <ellipse cx="313" cy="190" rx="7" ry="8" fill="#1d1d1d"/>
+  <!-- teeth -->
+  <rect x="280" y="217" width="8" height="9" rx="1" fill="#d4a017" opacity="0.7"/>
+  <rect x="292" y="217" width="8" height="9" rx="1" fill="#d4a017" opacity="0.7"/>
+  <rect x="304" y="217" width="8" height="9" rx="1" fill="#d4a017" opacity="0.7"/>
+  <!-- 3 knobs -->
+  <circle cx="220" cy="318" r="28" fill="#252525" stroke="#d4a017" stroke-width="2"/>
+  <circle cx="300" cy="318" r="28" fill="#252525" stroke="#d4a017" stroke-width="2"/>
+  <circle cx="380" cy="318" r="28" fill="#252525" stroke="#d4a017" stroke-width="2"/>
+  <!-- Knob indicators -->
+  <line x1="220" y1="293" x2="220" y2="306" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="300" y1="293" x2="300" y2="306" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="380" y1="293" x2="380" y2="306" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Footswitch -->
+  <circle cx="300" cy="408" r="35" fill="#111" stroke="#d4a017" stroke-width="2.5"/>
+  <circle cx="300" cy="408" r="22" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <!-- LED -->
+  <circle cx="300" cy="260" r="6" fill="#d4a017" opacity="0.9"/>
+  <!-- Label -->
+  <text x="300" y="462" font-family="Georgia, serif" font-size="19" font-weight="bold" fill="#f5f0e8" text-anchor="middle" letter-spacing="3">DOOM DRIVER</text>
+  <!-- Side jacks -->
+  <rect x="165" y="283" width="12" height="26" rx="4" fill="#2a2a2a" stroke="#d4a017" stroke-width="1"/>
+  <rect x="423" y="283" width="12" height="26" rx="4" fill="#2a2a2a" stroke="#d4a017" stroke-width="1"/>
+</svg>
