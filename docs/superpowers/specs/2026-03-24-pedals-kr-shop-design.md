@@ -35,10 +35,11 @@ src/
     checkout/                 # CheckoutForm, OrderSummary
     ui/                       # Button, Badge, etc.
   data/
-    products.ts               # Product data
-    reviews.ts                # Artist/review data
+    product-data.ts           # Raw product data
+    review-data.ts            # Raw review data
   lib/
-    products.ts               # Data access layer (abstraction)
+    product-service.ts        # Product data access layer (abstraction)
+    review-service.ts         # Review data access layer (abstraction)
     cart-store.ts             # Zustand cart store
     types.ts                  # Shared TypeScript types
     payment.ts                # PaymentProvider interface
@@ -61,8 +62,14 @@ src/
 - Secondary: Muted brown `#3d2b1f`
 
 ### Typography
-- Headings: Bold serif (e.g., Playfair Display or similar vintage feel)
-- Body: Clean sans-serif for readability (e.g., Inter)
+- Headings: **Playfair Display** (bold serif, vintage feel) via `next/font/google`
+- Body: **Inter** (clean sans-serif) via `next/font/google`
+
+### Images & Assets
+- Product images: `/public/images/products/` — placeholder SVGs (600x600) for initial launch
+- Avatars: `/public/images/avatars/` — placeholder SVGs (200x200)
+- Brand assets: `/public/images/brand/` — logo, textures, grain overlay
+- All images use `next/image` for optimization
 
 ## Landing Page Sections
 
@@ -152,7 +159,7 @@ interface Review {
 }
 
 interface CartItem {
-  product: Product;
+  productId: string;  // Reference by ID, resolve full product at render time
   quantity: number;
 }
 
@@ -187,22 +194,60 @@ interface PaymentProvider {
 
 ## Data Access Layer
 
-`lib/products.ts` exports:
+`lib/product-service.ts` exports:
 - `getProducts(category?: Category): Product[]`
 - `getProductBySlug(slug: string): Product | undefined`
+- `getProductById(id: string): Product | undefined`
 - `getFeaturedProducts(): Product[]`
 - `getCategories(): Category[]`
 
-Currently reads from `data/products.ts`. To migrate to CMS/DB, only this file needs to change.
+`lib/review-service.ts` exports:
+- `getReviews(): Review[]`
+
+Currently reads from `data/product-data.ts` and `data/review-data.ts`. To migrate to CMS/DB, only these service files need to change.
+
+## Price Formatting
+
+- All prices stored in KRW (number)
+- Both locales display KRW: Korean uses "₩289,000", English uses "₩289,000 KRW"
+- Use `Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KRW' })` for formatting
 
 ## i18n Strategy
 
+- **Library:** next-intl v4 with App Router plugin
+- **Config:** `src/i18n/routing.ts` defines locales and default locale; `src/i18n/request.ts` provides server-side message loading
+- **Middleware:** `src/middleware.ts` uses `createMiddleware` from next-intl for locale detection and routing
 - Route-based: `/ko/...` and `/en/...`
 - Default locale: `ko`
 - Root `/` redirects based on browser language detection
 - UI text in `messages/ko.json` and `messages/en.json`
 - Product data uses inline `{ ko, en }` objects
 - Language toggle (KO/EN) in header, preserves current page
+
+## Responsive Design
+
+- **Mobile** (<640px): Single column, hamburger menu, stacked layouts
+- **Tablet** (640-1024px): 2-column grids, collapsible navigation
+- **Desktop** (>1024px): Full layout with 3-column product grid, 2-column brand story
+- Uses Tailwind breakpoints: `sm`, `md`, `lg`, `xl`
+
+## SEO & Metadata
+
+- `generateMetadata` on each page for title, description, Open Graph tags
+- Product pages include JSON-LD structured data (`Product` schema)
+- `robots.txt` and `sitemap.xml` generated via Next.js conventions
+- Open Graph images for social sharing
+
+## Out of Stock Behavior
+
+- Out-of-stock products are still viewable on listing and detail pages
+- "Add to Cart" button is disabled with "Out of Stock" label
+- Category badge shows stock status
+
+## Checkout Placeholder Flow
+
+- User fills shipping form → clicks "Place Order" → shows confirmation message: "Thank you! Payment integration coming soon. We'll contact you via email."
+- No data is persisted; this is purely UI for now
 
 ## Dummy Data
 
