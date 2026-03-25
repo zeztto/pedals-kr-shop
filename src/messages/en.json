@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "shop": "Shop",
+    "custom": "Custom",
     "cart": "Cart"
   },
   "hero": {
@@ -83,6 +84,26 @@
   },
   "reviews": {
     "title": "What Artists Say"
+  },
+  "custom": {
+    "title": "Your Dream Pedal, Built by Hand",
+    "description": "Have a specific tone in mind? From custom builds based on reference pedals, to modifications of existing circuits, to entirely new designs — we're here to make it happen.",
+    "cta": "Request Custom Build",
+    "pageTitle": "Custom Build Request",
+    "pageDescription": "Tell us about the sound and specs you're looking for. We'll follow up with a quote and timeline.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "pedalType": "Pedal Type",
+    "pedalTypePlaceholder": "e.g., Distortion, Fuzz, Overdrive, Modification, etc.",
+    "referencePedal": "Reference Pedal (optional)",
+    "referencePedalPlaceholder": "e.g., Based on Tube Screamer, Big Muff style, etc.",
+    "details": "Details",
+    "detailsPlaceholder": "Describe the tone, controls, and any special requirements.",
+    "budget": "Budget Range (optional)",
+    "budgetPlaceholder": "e.g., $200-300",
+    "submit": "Send Request",
+    "thankYou": "Your request has been received. We'll respond via email within 2-3 business days. Thank you."
   },
   "common": {
     "currency": "₩",

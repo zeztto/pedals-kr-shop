@@ -15,7 +15,7 @@ export default function Hero() {
         src="/images/brand/hero-bg.jpg"
         alt=""
         fill
-        className="object-cover opacity-20"
+        className="object-cover opacity-40"
         priority
         sizes="100vw"
       />
@@ -24,7 +24,7 @@ export default function Hero() {
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            'radial-gradient(ellipse at center, rgba(13,13,13,0.4) 0%, rgba(13,13,13,0.85) 60%, rgba(13,13,13,0.95) 100%)',
+            'radial-gradient(ellipse at center, rgba(13,13,13,0.3) 0%, rgba(13,13,13,0.7) 60%, rgba(13,13,13,0.9) 100%)',
         }}
       />
 

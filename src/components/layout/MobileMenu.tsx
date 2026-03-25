@@ -86,6 +86,13 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
                 {t('shop')}
               </Link>
               <Link
+                href="/custom"
+                onClick={onClose}
+                className="py-3 text-lg text-cream hover:text-amber transition-colors border-b border-brown/30"
+              >
+                {t('custom')}
+              </Link>
+              <Link
                 href="/cart"
                 onClick={onClose}
                 className="py-3 text-lg text-cream hover:text-amber transition-colors border-b border-brown/30"

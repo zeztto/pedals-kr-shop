@@ -37,6 +37,12 @@ export default function Header() {
             >
               {t('shop')}
             </Link>
+            <Link
+              href="/custom"
+              className="text-cream hover:text-amber transition-colors text-sm tracking-wide"
+            >
+              {t('custom')}
+            </Link>
 
             {/* Locale toggle */}
             <div className="flex items-center gap-1 text-sm">

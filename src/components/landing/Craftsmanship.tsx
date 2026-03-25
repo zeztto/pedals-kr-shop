@@ -7,8 +7,8 @@ import Image from 'next/image';
 const stepImages = [
   '/images/brand/craft-2.jpg',
   '/images/brand/craft-1.jpg',
-  '/images/products/spring-tank.jpg',
-  '/images/products/doom-driver.jpg',
+  '/images/brand/craft-3.jpg',
+  '/images/brand/craft-4.jpg',
 ];
 
 export default function Craftsmanship() {
