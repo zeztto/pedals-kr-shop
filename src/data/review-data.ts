@@ -10,6 +10,7 @@ export const reviews: Review[] = [
       en: 'The gain structure of the Hellfire nails that Marshall Plexi feel. First boutique pedal at this price point that delivers this tone. I use it every gig.',
     },
     avatar: '/images/avatars/avatar-1.jpg',
+    pedalImage: '/images/products/hellfire.jpg',
   },
   {
     id: 'r2',
@@ -20,6 +21,7 @@ export const reviews: Review[] = [
       en: 'The BBD tone on the Analog Chorus is genuinely warm. When applied to a clean tone, you can feel the sound come alive in three dimensions. Never leaves my board, studio or stage.',
     },
     avatar: '/images/avatars/avatar-2.jpg',
+    pedalImage: '/images/products/analog-chorus.jpg',
   },
   {
     id: 'r3',
@@ -30,6 +32,7 @@ export const reviews: Review[] = [
       en: 'Recording with the Tape Echo feels like sitting in front of a real vintage tape machine. There\'s a texture that plugins simply can\'t replicate. Completely elevates the production quality.',
     },
     avatar: '/images/avatars/avatar-3.jpg',
+    pedalImage: '/images/products/tape-echo.jpg',
   },
   {
     id: 'r4',
@@ -40,5 +43,6 @@ export const reviews: Review[] = [
       en: 'The raw tone of the Fuzz War fits our band\'s sound perfectly. Low end stays tight even in drop tuning. Impressive how picking nuances come through even at high gain.',
     },
     avatar: '/images/avatars/avatar-4.jpg',
+    pedalImage: '/images/products/fuzz-war.jpg',
   },
 ];

@@ -2,16 +2,23 @@
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
-const stepNumbers = ['01', '02', '03', '04'];
+const stepImages = [
+  '/images/brand/craft-2.jpg',
+  '/images/brand/craft-1.jpg',
+  '/images/products/spring-tank.jpg',
+  '/images/products/doom-driver.jpg',
+];
 
 export default function Craftsmanship() {
   const t = useTranslations('craftsmanship');
 
-  const steps = stepNumbers.map((num, i) => ({
-    number: num,
+  const steps = [0, 1, 2, 3].map((i) => ({
+    number: String(i + 1).padStart(2, '0'),
     title: t(`steps.${i}.title`),
     description: t(`steps.${i}.description`),
+    image: stepImages[i],
   }));
 
   return (
@@ -26,31 +33,36 @@ export default function Craftsmanship() {
         {t('title')}
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {steps.map((step, index) => (
           <motion.div
             key={step.number}
-            className="flex flex-col items-center text-center relative"
+            className="bg-bg-primary rounded-lg overflow-hidden border border-brown/20"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.15 }}
+            transition={{ duration: 0.5, delay: index * 0.12 }}
           >
-            {/* Connecting line on desktop (except last step) */}
-            {index < steps.length - 1 && (
-              <div className="hidden md:block absolute top-6 left-[calc(50%+24px)] right-[-50%] border-t border-amber/20 z-0" />
-            )}
-
-            {/* Number circle */}
-            <div className="w-12 h-12 rounded-full border-2 border-amber flex items-center justify-center text-amber font-heading text-xl font-bold relative z-10 bg-bg-dark">
-              {step.number}
+            {/* Step image */}
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src={step.image}
+                alt={step.title}
+                fill
+                className="object-cover opacity-70"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-transparent" />
+              <div className="absolute top-3 left-3 w-10 h-10 rounded-full border-2 border-amber flex items-center justify-center text-amber font-heading text-sm font-bold bg-bg-dark/80">
+                {step.number}
+              </div>
             </div>
 
-            {/* Title */}
-            <p className="text-cream font-semibold text-lg mt-4">{step.title}</p>
-
-            {/* Description */}
-            <p className="text-cream/60 text-sm mt-2">{step.description}</p>
+            {/* Step content */}
+            <div className="p-5">
+              <p className="text-cream font-semibold text-base">{step.title}</p>
+              <p className="text-cream/50 text-sm mt-2 leading-relaxed">{step.description}</p>
+            </div>
           </motion.div>
         ))}
       </div>

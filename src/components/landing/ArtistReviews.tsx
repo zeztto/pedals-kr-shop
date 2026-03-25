@@ -26,31 +26,43 @@ export default function ArtistReviews() {
         {reviews.map((review, index) => (
           <motion.div
             key={review.id}
-            className="bg-bg-primary border border-amber/20 rounded-lg p-8 flex flex-col"
+            className="bg-bg-primary border border-amber/20 rounded-lg overflow-hidden flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
+            {/* Pedal image strip */}
+            <div className="relative h-40 overflow-hidden">
+              <Image
+                src={review.pedalImage}
+                alt=""
+                fill
+                className="object-cover opacity-50"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-primary/50 to-bg-primary" />
+            </div>
+
             {/* Quote */}
-            <div className="relative flex-1 mb-6">
-              <span className="absolute -top-1 -left-2 text-amber/20 text-6xl font-heading leading-none select-none">
+            <div className="relative flex-1 px-8 pb-6 -mt-6">
+              <span className="text-amber/20 text-5xl font-heading leading-none select-none">
                 &ldquo;
               </span>
-              <p className="text-cream/80 italic leading-relaxed pl-6 pt-3 text-[15px]">
+              <p className="text-cream/80 italic leading-relaxed text-[15px] -mt-3">
                 {review.comment[locale]}
               </p>
             </div>
 
             {/* Avatar + name + role */}
-            <div className="flex items-center gap-4 pt-4 border-t border-amber/10">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border border-amber/30">
+            <div className="flex items-center gap-4 px-8 pb-6">
+              <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0 border border-amber/30">
                 <Image
                   src={review.avatar}
                   alt={review.name[locale]}
                   fill
                   className="object-cover"
-                  sizes="48px"
+                  sizes="44px"
                 />
               </div>
               <div>

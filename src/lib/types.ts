@@ -24,6 +24,7 @@ export interface Review {
   role: LocalizedString;
   comment: LocalizedString;
   avatar: string;
+  pedalImage: string;
 }
 
 export interface CartItem {
